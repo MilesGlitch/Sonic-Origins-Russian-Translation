@@ -472,6 +472,8 @@ event ObjectDraw
 		end if
 		break
 
+//DrawActName(int startingFrame, int xpos, int ypos, int drawMode, bool useAllCaps, int spaceWidth, int spacing)
+	
 	case TITLECARD_STARTSTAGE
 	case TITLECARD_EXITTITLECARD
 		SetActivePalette(0, 0, screen.ysize)
@@ -511,32 +513,32 @@ event ObjectStartup
 	
 	//SpriteFrame(int xPivot, int yPivot, int width, int height, int sheetXPos, int sheetYPos)
 	
-	SpriteFrame(0, 0, 15, 16, 37, 79)		// "A"
-	SpriteFrame(0, 0, 16, 16, 53, 79)		// "В"
-	SpriteFrame(0, 0, 16, 16, 70, 79)		// "С"
-	SpriteFrame(0, 0, 16, 16, 87, 79)		// "Д"
-	SpriteFrame(0, 0, 15, 16, 104, 79)		// "E"
-	SpriteFrame(0, 0, 15, 16, 120, 79)		// "З"
-	SpriteFrame(0, 0, 16, 16, 136, 79)		// "Б"
-	SpriteFrame(0, 0, 16, 16, 153, 79)		// "Н"
-	SpriteFrame(0, 0, 17, 16, 170, 79)		// "Ь"
-	SpriteFrame(0, 0, 16, 16, 188, 79)		// "Ч"
-	SpriteFrame(0, 0, 16, 16, 205, 79)		// "К"
-	SpriteFrame(0, 0, 16, 16, 222, 79)		// "П"
-	SpriteFrame(0, 0, 23, 16, 43, 96)		// "М"
-	SpriteFrame(0, 0, 16, 16, 67, 96)		// "И"
-	SpriteFrame(0, 0, 16, 16, 84, 96)		// "О"
-	SpriteFrame(0, 0, 16, 16, 101, 96)		// "Р"
-	SpriteFrame(0, 0, 16, 16, 118, 96)		// "Ц"
-	SpriteFrame(0, 0, 16, 16, 135, 96)		// "Я"
-	SpriteFrame(0, 0, 16, 16, 152, 96)		// "Г"
-	SpriteFrame(0, 0, 16, 16, 169, 96)		// "T"
-	SpriteFrame(0, 0, 16, 16, 186, 96)		// "Й"
-	SpriteFrame(0, 0, 16, 16, 203, 96)		// "Л"
-	SpriteFrame(0, 0, 23, 16, 220, 96)		// "Щ"
-	SpriteFrame(0, 0, 15, 16, 43, 113)		// "Х"
-	SpriteFrame(0, 0, 16, 16, 59, 113)		// "У"
-	SpriteFrame(0, 0, 16, 16, 76, 113)		// "Ы"
+	SpriteFrame(0, 0, 15, 16, 37, 79)		// #0 - "A"
+	SpriteFrame(0, 0, 16, 16, 53, 79)		// #1 - "В"
+	SpriteFrame(0, 0, 16, 16, 70, 79)		// #2 - "С"
+	SpriteFrame(0, 0, 16, 16, 87, 79)		// #3 - "Д"
+	SpriteFrame(0, 0, 15, 16, 104, 79)		// #4 - "E"
+	SpriteFrame(0, 0, 15, 16, 120, 79)		// #5 - "З"
+	SpriteFrame(0, 0, 16, 16, 136, 79)		// #6 - "Б"
+	SpriteFrame(0, 0, 16, 16, 153, 79)		// #7 - "Н"
+	SpriteFrame(0, 0, 17, 16, 170, 79)		// #8 - "Ь"
+	SpriteFrame(0, 0, 16, 16, 188, 79)		// #9 - "Ч"
+	SpriteFrame(0, 0, 16, 16, 205, 79)		// #10 - "К"
+	SpriteFrame(0, 0, 16, 16, 222, 79)		// #11 - "П"
+	SpriteFrame(0, 0, 23, 16, 43, 96)		// #12 - "М"
+	SpriteFrame(0, 0, 16, 16, 67, 96)		// #13 - "И"
+	SpriteFrame(0, 0, 16, 16, 84, 96)		// #14 - "О"
+	SpriteFrame(0, 0, 16, 16, 101, 96)		// #15 - "Р"
+	SpriteFrame(0, 0, 16, 16, 118, 96)		// #16 - "Ц"
+	SpriteFrame(0, 0, 16, 16, 135, 96)		// #17 - "Я"
+	SpriteFrame(0, 0, 16, 16, 152, 96)		// #18 - "Г"
+	SpriteFrame(0, 0, 16, 16, 169, 96)		// #19 - "T"
+	SpriteFrame(0, 0, 16, 16, 186, 96)		// #20 - "Й"
+	SpriteFrame(0, 0, 16, 16, 203, 96)		// #21 - "Л"
+	SpriteFrame(0, 0, 23, 16, 220, 96)		// #22 - "Щ"
+	SpriteFrame(0, 0, 15, 16, 43, 113)		// #23 - "Х"
+	SpriteFrame(0, 0, 16, 16, 59, 113)		// #24 - "У"
+	SpriteFrame(0, 0, 16, 16, 76, 113)		// #25 - "Ы"
 
 	SpriteFrame(0, 0, 8, 256, 248, 0)		// Red Sidebar - #26
 	SpriteFrame(0, 0, 62, 16, 83, 1) 		// Zone - #27
@@ -550,6 +552,9 @@ event ObjectStartup
 	else
 		SpriteFrame(-160, -16, 136, 7, 110, 164) 	// "Waiting for 1P" - #32
 	end if
+
+	SpriteFrame(0, 0, 17, 16, 24, 119)		// #33 - "Ф"
+	SpriteFrame(0, 0, 21, 16, 2, 119)		// #34 - "Ш"
 
 	if options.vsMode == true
 		CallNativeFunction2(ReceiveEntity, 0x400, true)
