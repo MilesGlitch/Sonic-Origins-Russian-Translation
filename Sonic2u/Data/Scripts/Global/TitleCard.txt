@@ -401,11 +401,11 @@ event ObjectDraw
  		// "Sonic The Hedgehog" Text
 		temp0 = object.yellowRectPos
 		temp0 += screen.xcenter
-		DrawSpriteScreenXY(31, temp0, 176)
+		DrawSpriteScreenXY(33, temp0, 176)
 
 		// Red Rect (& Red Sidebar)
 		DrawRect(0, 0, object.redRectPos, screen.ysize, 0xE0, 0x00, 0x00, 0xFF) // Red Rect
-		DrawSpriteScreenXY(26, object.redRectPos, 0) // Red Sidebar
+		DrawSpriteScreenXY(28, object.redRectPos, 0) // Red Sidebar
 
 		temp0 = screen.xcenter
 		temp0 += temp2
@@ -417,10 +417,10 @@ event ObjectDraw
 		temp0 += temp2
 		temp0 += 64
 		temp0 += object.zonePos
-		DrawSpriteScreenXY(27, temp0, 35)
+		DrawSpriteScreenXY(29, temp0, 35)
 
 		if object.displayedActNo > 0
-			temp1 = 27
+			temp1 = 29
 			temp1 += object.displayedActNo
 			if temp1 > 30
 				temp1 = 30
@@ -445,9 +445,9 @@ event ObjectDraw
 
 		temp0 = object.yellowRectPos
 		temp0 += screen.xcenter
-		DrawSpriteScreenXY(31, temp0, 176)
+		DrawSpriteScreenXY(33, temp0, 176)
 		DrawRect(0, 0, object.redRectPos, screen.ysize, 0xE0, 0x00, 0x00, 0xFF)
-		DrawSpriteScreenXY(26, object.redRectPos, 0)
+		DrawSpriteScreenXY(28, object.redRectPos, 0)
 
 		temp0 = screen.xcenter
 		temp0 += temp2
@@ -459,10 +459,10 @@ event ObjectDraw
 		temp0 += temp2
 		temp0 += 64
 		temp0 += object.zonePos
-		DrawSpriteScreenXY(27, temp0, 35)
+		DrawSpriteScreenXY(29, temp0, 35)
 
 		if object.displayedActNo > 0
-			temp1 = 27
+			temp1 = 29
 			temp1 += object.displayedActNo
 			if temp1 > 30
 				temp1 = 30
@@ -472,8 +472,7 @@ event ObjectDraw
 		end if
 		break
 
-//DrawActName(int startingFrame, int xpos, int ypos, int drawMode, bool useAllCaps, int spaceWidth, int spacing)
-	
+
 	case TITLECARD_STARTSTAGE
 	case TITLECARD_EXITTITLECARD
 		SetActivePalette(0, 0, screen.ysize)
@@ -488,10 +487,10 @@ event ObjectDraw
 		temp0 += temp2
 		temp0 += 64
 		temp0 += object.zonePos
-		DrawSpriteScreenXY(27, temp0, 35)
+		DrawSpriteScreenXY(29, temp0, 35)
 
 		if object.displayedActNo > 0
-			temp1 = 27
+			temp1 = 29
 			temp1 += object.displayedActNo
 			if temp1 > 30
 				temp1 = 30
@@ -540,21 +539,23 @@ event ObjectStartup
 	SpriteFrame(0, 0, 16, 16, 59, 113)		// #24 - "У"
 	SpriteFrame(0, 0, 16, 16, 76, 113)		// #25 - "Ы"
 
-	SpriteFrame(0, 0, 8, 256, 248, 0)		// Red Sidebar - #26
-	SpriteFrame(0, 0, 62, 16, 83, 1) 		// Zone - #27
-	SpriteFrame(63, 0, 16, 29, 42, 1) 		// Act 1 - #28
-	SpriteFrame(63, 0, 23, 29, 59, 1) 		// Act 2 - #29
-	SpriteFrame(63, 0, 23, 32, 42, 31) 		// Act 3 - #30
-	SpriteFrame(0, -2, 140, 7, 257, 52) 	// "Sonic The Hedgehog" - #31
+	SpriteFrame(0, 0, 17, 16, 24, 119)		// #26 - "Ф"
+	SpriteFrame(0, 0, 21, 16, 2, 119)		// #27 - "Ш"
+
+	SpriteFrame(0, 0, 8, 256, 248, 0)		// #28 Red Sidebar
+	SpriteFrame(0, 0, 62, 16, 83, 1) 		// #29 Zone
+	SpriteFrame(63, 0, 16, 29, 42, 1) 		// #30 Act 1
+	SpriteFrame(63, 0, 23, 29, 59, 1) 		// #31 Act 2
+	SpriteFrame(63, 0, 23, 32, 42, 31) 		// #32 Act 3
+	SpriteFrame(0, -2, 140, 7, 257, 52) 	// #33 "Sonic The Hedgehog"
 
 	if vs.playerID == 0
-		SpriteFrame(-160, -16, 136, 7, 110, 172)	// "Waiting for 2P" - #32
+		SpriteFrame(-160, -16, 136, 7, 110, 172)	// #34 "Waiting for 2P" - #32
 	else
-		SpriteFrame(-160, -16, 136, 7, 110, 164) 	// "Waiting for 1P" - #32
+		SpriteFrame(-160, -16, 136, 7, 110, 164) 	// #35 "Waiting for 1P" - #32
 	end if
 
-	SpriteFrame(0, 0, 17, 16, 24, 119)		// #33 - "Ф"
-	SpriteFrame(0, 0, 21, 16, 2, 119)		// #34 - "Ш"
+	
 
 	if options.vsMode == true
 		CallNativeFunction2(ReceiveEntity, 0x400, true)
