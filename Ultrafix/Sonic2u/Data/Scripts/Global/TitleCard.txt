@@ -401,11 +401,11 @@ event ObjectDraw
  		// "Sonic The Hedgehog" Text
 		temp0 = object.yellowRectPos
 		temp0 += screen.xcenter
-		DrawSpriteScreenXY(31, temp0, 176)
+		DrawSpriteScreenXY(42, temp0, 176)
 
 		// Red Rect (& Red Sidebar)
 		DrawRect(0, 0, object.redRectPos, screen.ysize, 0xE0, 0x00, 0x00, 0xFF) // Red Rect
-		DrawSpriteScreenXY(26, object.redRectPos, 0) // Red Sidebar
+		DrawSpriteScreenXY(37, object.redRectPos, 0) // Red Sidebar
 
 		temp0 = screen.xcenter
 		temp0 += temp2
@@ -417,13 +417,13 @@ event ObjectDraw
 		temp0 += temp2
 		temp0 += 64
 		temp0 += object.zonePos
-		DrawSpriteScreenXY(27, temp0, 35)
+		DrawSpriteScreenXY(38, temp0, 35)
 
 		if object.displayedActNo > 0
-			temp1 = 27
+			temp1 = 38
 			temp1 += object.displayedActNo
-			if temp1 > 30
-				temp1 = 30
+			if temp1 > 41
+				temp1 = 41
 			end if
 			temp0 -= 23
 			DrawSpriteScreenXY(temp1, temp0, 79)
@@ -445,9 +445,9 @@ event ObjectDraw
 
 		temp0 = object.yellowRectPos
 		temp0 += screen.xcenter
-		DrawSpriteScreenXY(31, temp0, 176)
+		DrawSpriteScreenXY(42, temp0, 176)
 		DrawRect(0, 0, object.redRectPos, screen.ysize, 0xE0, 0x00, 0x00, 0xFF)
-		DrawSpriteScreenXY(26, object.redRectPos, 0)
+		DrawSpriteScreenXY(37, object.redRectPos, 0)
 
 		temp0 = screen.xcenter
 		temp0 += temp2
@@ -459,13 +459,13 @@ event ObjectDraw
 		temp0 += temp2
 		temp0 += 64
 		temp0 += object.zonePos
-		DrawSpriteScreenXY(27, temp0, 35)
+		DrawSpriteScreenXY(38, temp0, 35)
 
 		if object.displayedActNo > 0
-			temp1 = 27
+			temp1 = 38
 			temp1 += object.displayedActNo
-			if temp1 > 30
-				temp1 = 30
+			if temp1 > 41
+				temp1 = 41
 			end if
 			temp0 -= 23
 			DrawSpriteScreenXY(temp1, temp0, 79)
@@ -486,13 +486,13 @@ event ObjectDraw
 		temp0 += temp2
 		temp0 += 64
 		temp0 += object.zonePos
-		DrawSpriteScreenXY(27, temp0, 35)
+		DrawSpriteScreenXY(38, temp0, 35)
 
 		if object.displayedActNo > 0
-			temp1 = 27
+			temp1 = 38
 			temp1 += object.displayedActNo
-			if temp1 > 30
-				temp1 = 30
+			if temp1 > 41
+				temp1 = 41
 			end if
 			temp0 -= 23
 			DrawSpriteScreenXY(temp1, temp0, 79)
@@ -508,39 +508,50 @@ event ObjectStartup
 	// Title card frames
 
 	// Titlecard Letters (0-25)
-	SpriteFrame(0, 0, 15, 16, 37, 79)
-	SpriteFrame(0, 0, 16, 16, 53, 79)
-	SpriteFrame(0, 0, 16, 16, 70, 79)
-	SpriteFrame(0, 0, 16, 16, 87, 79)
-	SpriteFrame(0, 0, 15, 16, 104, 79)
-	SpriteFrame(0, 0, 15, 16, 120, 79)
-	SpriteFrame(0, 0, 16, 16, 136, 79)
-	SpriteFrame(0, 0, 16, 16, 153, 79)
-	SpriteFrame(0, 0, 17, 16, 170, 79)
-	SpriteFrame(0, 0, 16, 16, 188, 79)
-	SpriteFrame(0, 0, 16, 16, 205, 79)
-	SpriteFrame(0, 0, 16, 16, 222, 79)
-	SpriteFrame(0, 0, 23, 16, 43, 96)
-	SpriteFrame(0, 0, 16, 16, 67, 96)
-	SpriteFrame(0, 0, 16, 16, 84, 96)
-	SpriteFrame(0, 0, 16, 16, 101, 96)
-	SpriteFrame(0, 0, 16, 16, 118, 96)
-	SpriteFrame(0, 0, 16, 16, 135, 96)
-	SpriteFrame(0, 0, 16, 16, 152, 96)
-	SpriteFrame(0, 0, 16, 16, 169, 96)
-	SpriteFrame(0, 0, 16, 16, 186, 96)
-	SpriteFrame(0, 0, 16, 16, 203, 96)
-	SpriteFrame(0, 0, 23, 16, 220, 96)
-	SpriteFrame(0, 0, 15, 16, 43, 113)
-	SpriteFrame(0, 0, 16, 16, 59, 113)
-	SpriteFrame(0, 0, 16, 16, 76, 113)
+	SpriteFrame(0, 0, 15, 16, 37, 79)		// #0 - "A"
+	SpriteFrame(0, 0, 16, 16, 53, 79)		// #1 - "В"
+	SpriteFrame(0, 0, 16, 16, 70, 79)		// #2 - "С"
+	SpriteFrame(0, 0, 16, 16, 87, 79)		// #3 - "Д"
+	SpriteFrame(0, 0, 15, 16, 104, 79)		// #4 - "E"
+	SpriteFrame(0, 0, 15, 16, 120, 79)		// #5 - "З"
+	SpriteFrame(0, 0, 16, 16, 136, 79)		// #6 - "Б"
+	SpriteFrame(0, 0, 16, 16, 153, 79)		// #7 - "Н"
+	SpriteFrame(0, 0, 17, 16, 170, 79)		// #8 - "Ь"
+	SpriteFrame(0, 0, 16, 16, 188, 79)		// #9 - "Ч"
+	SpriteFrame(0, 0, 16, 16, 205, 79)		// #10 - "К"
+	SpriteFrame(0, 0, 16, 16, 222, 79)		// #11 - "П"
+	SpriteFrame(0, 0, 23, 16, 43, 96)		// #12 - "М"
+	SpriteFrame(0, 0, 16, 16, 67, 96)		// #13 - "И"
+	SpriteFrame(0, 0, 16, 16, 84, 96)		// #14 - "О"
+	SpriteFrame(0, 0, 16, 16, 101, 96)		// #15 - "Р"
+	SpriteFrame(0, 0, 16, 16, 118, 96)		// #16 - "Ц"
+	SpriteFrame(0, 0, 16, 16, 135, 96)		// #17 - "Я"
+	SpriteFrame(0, 0, 16, 16, 152, 96)		// #18 - "Г"
+	SpriteFrame(0, 0, 16, 16, 169, 96)		// #19 - "T"
+	SpriteFrame(0, 0, 16, 16, 186, 96)		// #20 - "Й"
+	SpriteFrame(0, 0, 16, 16, 203, 96)		// #21 - "Л"
+	SpriteFrame(0, 0, 23, 16, 220, 96)		// #22 - "Щ"
+	SpriteFrame(0, 0, 15, 16, 43, 113)		// #23 - "Х"
+	SpriteFrame(0, 0, 16, 16, 59, 113)		// #24 - "У"
+	SpriteFrame(0, 0, 16, 16, 76, 113)		// #25 - "Ы"
+	SpriteFrame(0, 0, 17, 16, 24, 119)		// #26 - "Ф"
+    SpriteFrame(0, 0, 21, 16, 2, 119)		// #27 - "Ш"
+	SpriteFrame(0, 0, 21, 16, 2, 119)		// #28
+	SpriteFrame(0, 0, 21, 16, 2, 119)		// #29
+	SpriteFrame(0, 0, 21, 16, 2, 119)		// #30
+	SpriteFrame(0, 0, 21, 16, 2, 119)		// #31
+	SpriteFrame(0, 0, 21, 16, 2, 119)		// #32
+	SpriteFrame(0, 0, 21, 16, 2, 119)		// #33
+	SpriteFrame(0, 0, 21, 16, 2, 119)		// #34
+	SpriteFrame(0, 0, 21, 16, 2, 119)		// #35
+	SpriteFrame(0, 0, 21, 16, 2, 119)		// #36
 
-	SpriteFrame(0, 0, 8, 256, 248, 0)	// Red Sidebar - #26
-	SpriteFrame(0, 0, 62, 16, 83, 1) 	// Zone - #27
-	SpriteFrame(63, 0, 16, 29, 42, 1) 	// Act 1 - #28
-	SpriteFrame(63, 0, 23, 29, 59, 1) 	// Act 2 - #29
-	SpriteFrame(63, 0, 23, 32, 42, 31) 	// Act 3 - #30
-	SpriteFrame(0, -2, 140, 7, 257, 52) 	// "Sonic The Hedgehog" - #31
+	SpriteFrame(0, 0, 8, 256, 248, 0)		// #37 Red Sidebar - #26
+	SpriteFrame(0, 0, 62, 16, 83, 1) 		// #38 Zone - #27
+	SpriteFrame(63, 0, 16, 29, 42, 1) 		// #39 Act 1 - #28
+	SpriteFrame(63, 0, 23, 29, 59, 1) 		// #40 Act 2 - #29
+	SpriteFrame(63, 0, 23, 32, 42, 31) 		// #41 Act 3 - #30
+	SpriteFrame(0, -2, 140, 7, 257, 52) 	// #42 "Sonic The Hedgehog" - #31
 
 	if vs.playerID == 0
 		SpriteFrame(-160, -16, 136, 7, 110, 172)	// "Waiting for 2P" - #32
